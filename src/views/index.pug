@@ -1,0 +1,31 @@
+include ./data/_config.pug
+include ./mixin/_section.pug
+-
+  var sectionItem = [
+    {
+      id: 'js-fit-video-1',
+      addClass: 'js-fit-video',
+      title: pageTitle,
+      content: '<p>画面いっぱいにvideoタグを配置するJavaScriptライブラリのデモページです。ダウンロード・使い方などの詳細は<a href="#">GitHub</a>で公開していますのでそちらをご覧ください。</p><p>下記ボタンを押すと設定を解除できます。</p>',
+      video: {
+        path: config.videoDir + 'video.mp4',
+        copy: 'Video by <a href="https://vimeo.com/mankindfilms">Graham Uhelski</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a>'
+      },
+    }
+  ]
+
+doctype html
+html(lang="ja")
+  head
+    title= pageTitle
+    meta(name="viewport" content="width=device-width, shrink-to-fit=no")
+    link(rel="stylesheet" href=config.libDir + "normalize/normalize.css")
+    link(rel="stylesheet" href="./css/style.css")
+  body
+    each item in sectionItem
+      +section(item)
+
+  script(src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+  //- script(src="./js/jquery.fitVideo.js")
+  script(src="./js/fitVideo.js")
+  script(src="./js/app.js")

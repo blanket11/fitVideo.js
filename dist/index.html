@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>fitVideo.js</title>
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+    <link rel="stylesheet" href="./lib/normalize/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <section class="section">
+      <div class="section__content">
+        <h2 class="heading">fitVideo.js</h2>
+        <div class="content"><p>画面いっぱいにvideoタグを配置するJavaScriptライブラリのデモページです。ダウンロード・使い方などの詳細は<a href="#">GitHub</a>で公開していますのでそちらをご覧ください。</p><p>下記ボタンを押すと設定を解除できます。</p>
+          <div class="button button-mt js-fit-video-button">fitVideo.jsの設定を解除</div>
+        </div>
+      </div>
+      <div class="video-copy">Video by <a href="https://vimeo.com/mankindfilms">Graham Uhelski</a> / <a href="http://creativecommons.org/licenses/by/3.0/us/" target="_blank">CC BY 3.0</a></div>
+      <div class="fit-video js-fit-video" id="js-fit-video-1">
+        <video class="fit-video__view js-fit-video__view" autoplay="autoplay" loop="loop" muted="muted">
+          <source src="./lib/video/video.mp4"/>
+        </video>
+      </div>
+    </section>
+  </body>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./js/fitVideo.js"></script>
+  <script src="./js/app.js"></script>
+</html>

@@ -1,0 +1,16 @@
+mixin section(item)
+  if item.id === undefined
+    - item.id = ''
+  section.section
+    .section__content
+      h2.heading
+        | #{item.title}
+      .content
+        | !{item.content}
+        div(class='button button-mt '+item.addClass+"-button")
+          |fitVideo.jsの設定を解除
+    .video-copy
+      | !{item.video.copy}
+    div(id=item.id class="fit-video "+item.addClass)
+      video.fit-video__view.js-fit-video__view(autoplay loop muted)
+        source(src=item.video.path)
