@@ -1,6 +1,5 @@
 class FitVideo {
   constructor(target, options = null) {
-    this.$window = $(window);
     this.target = document.querySelectorAll(target);
     this.options = options;
     this.$video = null;
