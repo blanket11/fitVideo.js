@@ -12,6 +12,7 @@ var FitVideo = function () {
 
     _classCallCheck(this, FitVideo);
 
+    this.$window = $(window);
     this.target = document.querySelectorAll(target);
     this.options = options;
     this.$video = null;
