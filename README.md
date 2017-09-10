@@ -1,7 +1,9 @@
 # fitVideo.js
 
 ## このライブラリについて
-videoタグを画面いっぱいに表示します。
+videoタグを画面いっぱいに表示します。  
+
+[DEMO](https://blanket11.github.io/fitVideo.js/)
 
 ## 使い方サンプル
 
