@@ -17,7 +17,7 @@ class FitVideo {
       }
     };
 
-    this.options = $.extend({
+    this.options = this._merge({
       'size': {
         'width': 1280,
         'height': 720
@@ -121,6 +121,18 @@ class FitVideo {
     window.removeEventListener('load', this._loopHandler);
     window.removeEventListener('resize', this._loopHandler);
   }
+
+  _merge(obj1, obj2) {
+    if (!obj2) {
+      obj2 = {};
+    }
+    for (var attrname in obj2) {
+      if (obj2.hasOwnProperty(attrname)) {
+          obj1[attrname] = obj2[attrname];
+      }
+    }
+    return obj1;
+};
 
 
   /**
